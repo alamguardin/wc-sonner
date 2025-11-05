@@ -1,7 +1,13 @@
-button {
-    font-size: 24px;
-    display: block;
+.wc-toast {
+    display: inline-block;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
     font-family: sans-serif;
-    padding: 20px;
-    background: blue;
+    padding: 1rem 1.5rem;
+}
+
+.wc-toast-message {
+    color: #1d293d;
 }

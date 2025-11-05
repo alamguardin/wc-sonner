@@ -9,7 +9,7 @@ export default defineConfig({
         lib: {
             entry: resolve(__dirname, 'lib/index.js'),
             name: 'wc-sonner',
-            fileName: (format, entryName) => `wc-sonner${entryName}.${format}.js`
+            fileName: (format, entryName) => `wc-sonner-${entryName}.${format}.js`
         }
     }
 })

@@ -3,6 +3,14 @@
   "version": "0.0.0",
   "type": "module",
   "files": ["dist"],
+  "main": "./dist/wc-sonner-index.umd.js",
+  "module": "./dist/wc-sonner-index.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/wc-sonner-index.es.js",
+      "require": "./dist/wc-sonner-index.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
