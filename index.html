@@ -40,19 +40,13 @@
           transform: scale(0.9);
         }
       }
-
-      wc-sonner {
-        position: absolute;
-        bottom: 1.5rem;
-        right: 1.5rem;
-      }
     </style>
   </head>
   <body>
     <div id="app">
       <button>Show Toast</button>
     </div>
-    <wc-sonner id="first"></wc-sonner>
+    <wc-sonner id="first" position="top-left"></wc-sonner>
     <wc-sonner id="second"></wc-sonner>
     <script type="module">
       import { toast } from '/lib/index.js'
