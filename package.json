@@ -2,7 +2,9 @@
   "name": "wc-sonner",
   "version": "0.0.0",
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/wc-sonner-index.umd.js",
   "module": "./dist/wc-sonner-index.es.js",
   "exports": {
@@ -17,6 +19,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.3.7",
     "vite": "npm:rolldown-vite@7.1.14"
   },
   "pnpm": {
