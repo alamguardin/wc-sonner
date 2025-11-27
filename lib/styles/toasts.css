@@ -1,12 +1,3 @@
-:host {
-	--bg-toast-light: #f9fafb;
-	--br-toast-light: #e5e7eb;
-	--fg-toast-title-light: #030712;
-	--fg-toast-description-light: #1e2939;
-	--fg-toast-close-normal-light: #d1d5dc;
-	--fg-toast-close-hover-light: #1e2939;
-}
-
 *,
 *::before,
 *::after {
@@ -15,6 +6,55 @@
 	box-sizing: border-box;
 }
 
+/* Custom element styles */
+:host {
+	/* Pallete color */
+	--bg-toast-light: #f9fafb;
+	--br-toast-light: #e5e7eb;
+	--fg-toast-title-light: #030712;
+	--fg-toast-description-light: #1e2939;
+	--fg-toast-close-normal-light: #d1d5dc;
+	--fg-toast-close-hover-light: #1e2939;
+
+	/* Default styles */
+	position: absolute;
+	width: 300px;
+}
+
+:host,
+:host([position="bottom-right"]) {
+	bottom: 1.5rem;
+	right: 1.5rem;
+}
+
+:host([position="bottom-center"]) {
+	bottom: 1.5rem;
+	right: calc(50% - 300px);
+	transform: translateX(-50%);
+}
+
+:host([position="bottom-left"]) {
+	bottom: 1.5rem;
+	left: 1.5rem;
+}
+
+:host([position="top-right"]) {
+	top: 1.5rem;
+	right: 1.5rem;
+}
+
+:host([position="top-center"]) {
+	top: 1.5rem;
+	right: calc(50% - 300px);
+	transform: translateX(-50%);
+}
+
+:host([position="top-left"]) {
+	top: 1.5rem;
+	left: 1.5rem;
+}
+
+/* Toasts Styles */
 .toast {
 	position: absolute;
 	top: unset;
