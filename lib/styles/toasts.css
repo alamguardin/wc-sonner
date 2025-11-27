@@ -19,6 +19,7 @@
 	/* Default styles */
 	position: absolute;
 	width: 300px;
+	height: max-content;
 }
 
 :host,
@@ -126,51 +127,39 @@
 }
 
 /* Collapse toast while not hovered */
-:host([position="top-right"]),
-:host([position="top-center"]),
-:host([position="top-left"]) {
+:host([position^="top"]) {
 	.toast {
 		top: 0;
 		right: 0;
 	}
 }
 
-:host([position="bottom-right"]),
-:host([position="bottom-center"]),
-:host([position="bottom-left"]) {
+:host([position^="bottom"]) {
 	.toast {
 		bottom: 0;
 		right: 0;
 	}
 }
 
-:host([position="top-right"]):has(:nth-child(2 of .toast)),
-:host([position="top-center"]):has(:nth-child(2 of .toast)),
-:host([position="top-left"]):has(:nth-child(2 of .toast)) {
+:host([position^="top"]):has(:nth-child(2 of .toast)) {
 	.toast:nth-last-child(2) {
 		transform: translateY(15%) scale(0.95);
 	}
 }
 
-:host([position="top-right"]):has(:nth-child(3 of .toast)),
-:host([position="top-center"]):has(:nth-child(3 of .toast)),
-:host([position="top-left"]):has(:nth-child(3 of .toast)) {
+:host([position^="top"]):has(:nth-child(3 of .toast)) {
 	.toast:nth-last-child(3) {
 		transform: translateY(30%) scale(0.9);
 	}
 }
 
-:host([position="bottom-right"]):has(:nth-child(2 of .toast)),
-:host([position="bottom-center"]):has(:nth-child(2 of .toast)),
-:host([position="bottom-left"]):has(:nth-child(2 of .toast)) {
+:host([position^="bottom"]):has(:nth-child(2 of .toast)) {
 	.toast:nth-last-child(2) {
 		transform: translateY(-15%) scale(0.95);
 	}
 }
 
-:host([position="bottom-right"]):has(:nth-child(3 of .toast)),
-:host([position="bottom-center"]):has(:nth-child(3 of .toast)),
-:host([position="bottom-left"]):has(:nth-child(3 of .toast)) {
+:host([position^="bottom"]):has(:nth-child(3 of .toast)) {
 	.toast:nth-last-child(3) {
 		transform: translateY(-30%) scale(0.9);
 	}
@@ -178,32 +167,22 @@
 
 /* Expand the toast when the user hovers over the cursor */
 
-:host([position="top-right"].expand) > .toast:nth-last-child(2),
-:host([position="top-center"].expand) > .toast:nth-last-child(2),
-:host([position="top-left"].expand) > .toast:nth-last-child(2) {
+:host([position^="top"].expand) > .toast:nth-last-child(2) {
 	transform: translateY(calc(100% + 1rem)) !important;
 }
 
-:host([position="top-right"].expand) > .toast:nth-last-child(3),
-:host([position="top-center"].expand) > .toast:nth-last-child(3),
-:host([position="top-left"].expand) > .toast:nth-last-child(3) {
+:host([position^="top"].expand) > .toast:nth-last-child(3) {
 	transform: translateY(calc(200% + 2rem)) !important;
 }
 
-:host([position="top-right"].expand) > .toast:nth-last-child(4),
-:host([position="top-center"].expand) > .toast:nth-last-child(4),
-:host([position="top-left"].expand) > .toast:nth-last-child(4) {
+:host([position^="top"].expand) > .toast:nth-last-child(4) {
 	transform: translateY(calc(300% + 3rem)) !important;
 }
 
-:host([position="top-right"].expand) > .toast:nth-last-child(5),
-:host([position="top-center"].expand) > .toast:nth-last-child(5),
-:host([position="top-left"].expand) > .toast:nth-last-child(5) {
+:host([position^="top"].expand) > .toast:nth-last-child(5) {
 	transform: translateY(calc(400% + 4rem)) !important;
 }
 
-:host([position="top-right"].expand) > .toast:nth-last-child(6),
-:host([position="top-center"].expand) > .toast:nth-last-child(6),
-:host([position="top-left"].expand) > .toast:nth-last-child(6) {
+:host([position^="top"].expand) > .toast:nth-last-child(6) {
 	transform: translateY(calc(500% + 5rem)) !important;
 }
