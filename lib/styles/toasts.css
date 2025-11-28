@@ -134,6 +134,7 @@
 	}
 }
 
+:host,
 :host([position^="bottom"]) {
 	.toast {
 		bottom: 0;
@@ -153,12 +154,14 @@
 	}
 }
 
+:host(:not([position^="top"])):has(:nth-child(2 of .toast)),
 :host([position^="bottom"]):has(:nth-child(2 of .toast)) {
 	.toast:nth-last-child(2) {
 		transform: translateY(-15%) scale(0.95);
 	}
 }
 
+:host(:not([position^="top"])):has(:nth-child(3 of .toast)),
 :host([position^="bottom"]):has(:nth-child(3 of .toast)) {
 	.toast:nth-last-child(3) {
 		transform: translateY(-30%) scale(0.9);
@@ -187,22 +190,26 @@
 	transform: translateY(calc(500% + 5rem)) !important;
 }
 
+:host(.expand) > .toast:nth-last-child(2),
 :host([position^="bottom"].expand) > .toast:nth-last-child(2) {
 	transform: translateY(calc(-100% - 1rem)) !important;
 }
-
+:host(.expand) > .toast:nth-last-child(3),
 :host([position^="bottom"].expand) > .toast:nth-last-child(3) {
 	transform: translateY(calc(-200% - 2rem)) !important;
 }
 
+:host(.expand) > .toast:nth-last-child(4),
 :host([position^="bottom"].expand) > .toast:nth-last-child(4) {
 	transform: translateY(calc(-300% - 3rem)) !important;
 }
 
+:host(.expand) > .toast:nth-last-child(5),
 :host([position^="bottom"].expand) > .toast:nth-last-child(5) {
 	transform: translateY(calc(-400% - 4rem)) !important;
 }
 
+:host(.expand) > .toast:nth-last-child(6),
 :host([position^="bottom"].expand) > .toast:nth-last-child(6) {
 	transform: translateY(calc(-500% - 5rem)) !important;
 }

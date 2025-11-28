@@ -5,62 +5,15 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>wc-sonner</title>
-    <style>
-      *, *::before, *::after {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      #app {
-        width: 100%;
-        height: 100dvh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      button {
-        padding: 0.75rem 1.5rem;
-        background: #f1f5f9;
-        outline: none;
-        border: 2px solid #e2e8f0;
-        border-radius: 0.5rem;
-        font-family: sans-serif;
-        font-size: 14px;
-        font-weight: 600;
-        color: #1d293d;
-        cursor: pointer;
-
-        &:hover {
-          background: #f8fafc;
-        }
-
-        &:active {
-          transform: scale(0.9);
-        }
-      }
-    </style>
   </head>
   <body>
+    <!-- Custom Element -->
+    <wc-sonner></wc-sonner>
+    <!-- App Container -->
     <div id="app">
-      <button>Show Toast</button>
+      <button id="defaultButton">Show Toast</button>
     </div>
-    <!-- TEST #1 SHOW TOAST -->
-    <wc-sonner id="first" position="top-right"></wc-sonner>
-    <wc-sonner id="second"></wc-sonner>
-    <script type="module">
-      import { toast } from '/lib/index.js'
-
-      let count = 1
-      
-      document.querySelector('button').addEventListener('click', () => {
-        toast.display(`Hi! from wc-sonner #${count}`, {
-          description: 'This is other message',
-          closeButton: true
-        })
-        count++
-      })
-    </script>
+    <!-- Test Code -->
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>
