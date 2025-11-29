@@ -96,6 +96,13 @@
 	font-size: 0.75rem;
 	color: var(--fg-toast-title-light);
 	font-weight: 600;
+	display: flex;
+	align-items: center;
+	gap: 0.375rem;
+}
+
+.toast-title svg {
+	width: 1rem;
 }
 
 .toast-description {
