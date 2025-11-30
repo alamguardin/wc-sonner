@@ -8,13 +8,29 @@
 
 /* Custom element styles */
 :host {
-	/* Pallete color */
+	/* Default Toast Light */
 	--bg-toast-light: #f9fafb;
 	--br-toast-light: #e5e7eb;
 	--fg-toast-title-light: #030712;
 	--fg-toast-description-light: #1e2939;
 	--fg-toast-close-normal-light: #d1d5dc;
 	--fg-toast-close-hover-light: #1e2939;
+	/* Succes Toast Light */
+	--bg-success-light: #dcfce7;
+	--br-success-light: #7bf1a8;
+	--fg-success-light: #032e15;
+	/* Error Toast Light */
+	--bg-error-light: #ffe2e2;
+	--br-error-light: #ffa2a2;
+	--fg-error-light: #460809;
+	/* Warning Toast Light */
+	--bg-warning-light: #ffedd4;
+	--br-warning-light: #ffb86a;
+	--fg-warning-light: #441306;
+	/* info Toast Light */
+	--bg-info-light: #dbeafe;
+	--br-info-light: #8ec5ff;
+	--fg-info-light: #162456;
 
 	/* Default styles */
 	position: absolute;
@@ -131,6 +147,75 @@
 
 .toast-close svg {
 	width: 100%;
+}
+
+/* Toast variants styles */
+.toast.success {
+	background: var(--bg-success-light);
+	border-color: var(--br-success-light);
+}
+
+.toast.success .toast-title {
+	color: var(--fg-success-light);
+}
+
+.toast.success .toast-description {
+	color: var(--fg-success-light);
+}
+
+.toast.success .toast-close {
+	color: var(--fg-success-light);
+}
+
+.toast.error {
+	background: var(--bg-error-light);
+	border-color: var(--br-error-light);
+}
+
+.toast.error .toast-title {
+	color: var(--fg-error-light);
+}
+
+.toast.error .toast-description {
+	color: var(--fg-error-light);
+}
+
+.toast.error .toast-close {
+	color: var(--fg-error-light);
+}
+
+.toast.warning {
+	background: var(--bg-warning-light);
+	border-color: var(--br-warning-light);
+}
+
+.toast.warning .toast-title {
+	color: var(--fg-warning-light);
+}
+
+.toast.warning .toast-description {
+	color: var(--fg-warning-light);
+}
+
+.toast.warning .toast-close {
+	color: var(--fg-warning-light);
+}
+
+.toast.info {
+	background: var(--bg-info-light);
+	border-color: var(--br-info-light);
+}
+
+.toast.info .toast-title {
+	color: var(--fg-info-light);
+}
+
+.toast.info .toast-description {
+	color: var(--fg-info-light);
+}
+
+.toast.info .toast-close {
+	color: var(--fg-info-light);
 }
 
 /* Collapse toast while not hovered */
