@@ -8,6 +8,7 @@ btn.addEventListener('click', () => {
 	toast.error(`This is the toast #${count} from wc-sonner`, {
 		description: 'This is a toast description',
 		closeButton: true,
+		sonnerId: 'second',
 	});
 
 	count++;
