@@ -237,12 +237,14 @@
 :host([position^="top"]):has(:nth-child(2 of .toast)) {
 	.toast:nth-last-child(2) {
 		transform: translateY(15%) scale(0.95);
+		opacity: 0.5;
 	}
 }
 
 :host([position^="top"]):has(:nth-child(3 of .toast)) {
 	.toast:nth-last-child(3) {
 		transform: translateY(30%) scale(0.9);
+		opacity: 0.2;
 	}
 }
 
@@ -250,6 +252,7 @@
 :host([position^="bottom"]):has(:nth-child(2 of .toast)) {
 	.toast:nth-last-child(2) {
 		transform: translateY(-15%) scale(0.95);
+		opacity: 0.5;
 	}
 }
 
@@ -257,10 +260,15 @@
 :host([position^="bottom"]):has(:nth-child(3 of .toast)) {
 	.toast:nth-last-child(3) {
 		transform: translateY(-30%) scale(0.9);
+		opacity: 0.2;
 	}
 }
 
 /* Expand the toast when the user hovers over the cursor */
+
+:host(.expand) > .toast {
+	opacity: 1 !important;
+}
 
 :host([position^="top"].expand) > .toast:nth-last-child(2) {
 	transform: translateY(calc(100% + 1rem)) !important;
