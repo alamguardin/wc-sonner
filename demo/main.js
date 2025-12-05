@@ -8,6 +8,7 @@ btn.addEventListener('click', () => {
 	toast.display(`This is the toast #${count} from wc-beru`, {
 		description: 'This is a toast description',
 		closeButton: true,
+		beruId: 'second',
 	});
 
 	count++;
