@@ -6,7 +6,7 @@
 	box-sizing: border-box;
 }
 
-body:has(wc-sonner[theme="dark"]) {
+body:has(wc-beru[theme="dark"]) {
 	background: #09090b;
 }
 

@@ -8,9 +8,9 @@ export default defineConfig({
 	build: {
 		lib: {
 			entry: resolve(__dirname, 'lib/index.js'),
-			name: 'wc-sonner',
+			name: 'wc-beru',
 			formats: ['es', 'umd'],
-			fileName: (format) => `wc-sonner-${format}.js`,
+			fileName: (format) => `wc-beru-${format}.js`,
 		},
 		minify: true,
 	},

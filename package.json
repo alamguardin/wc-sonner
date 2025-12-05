@@ -1,16 +1,16 @@
 {
-	"name": "wc-sonner",
+	"name": "wc-beru",
 	"version": "0.0.0",
 	"type": "module",
 	"files": [
 		"dist"
 	],
-	"main": "./dist/wc-sonner.umd.js",
-	"module": "./dist/wc-sonner.es.js",
+	"main": "./dist/wc-beru.umd.js",
+	"module": "./dist/wc-beru.es.js",
 	"exports": {
 		".": {
-			"import": "./dist/wc-sonner.es.js",
-			"require": "./dist/wc-sonner.umd.js"
+			"import": "./dist/wc-beru.es.js",
+			"require": "./dist/wc-beru.umd.js"
 		}
 	},
 	"scripts": {
