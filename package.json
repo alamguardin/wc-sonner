@@ -5,12 +5,12 @@
 	"files": [
 		"dist"
 	],
-	"main": "./dist/wc-beru.umd.js",
-	"module": "./dist/wc-beru.es.js",
+	"main": "./dist/wc-beru-umd.js",
+	"module": "./dist/wc-beru-es.js",
 	"exports": {
 		".": {
-			"import": "./dist/wc-beru.es.js",
-			"require": "./dist/wc-beru.umd.js"
+			"import": "./dist/wc-beru-es.js",
+			"require": "./dist/wc-beru-umd.js"
 		}
 	},
 	"scripts": {
